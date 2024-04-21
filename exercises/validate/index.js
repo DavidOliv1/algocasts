@@ -5,15 +5,6 @@
 // every node's right hand child is greater than
 // the parent
 
-// solution 1:
-// function validate(node, min = null, max = null) {
-//     if (min && node.data < min || max && node.data > max) return false;
-//     if (node.left) return validate(node.left, min, node.data);
-//     if (node.right) return validate(node.right, node.data, max);
-//     return true
-// }
-
-// solution 2:
 function validate(node, min = null, max = null) {
   if (max !== null && node.data > max) {
     return false;
